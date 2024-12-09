@@ -18,8 +18,9 @@ export class CustomerFormComponent {
 
   onSubmitForm(){
     console.log(this.customer);
-    this.customerService.addCustomer(this.customer);
-    this.router.navigate(['/invoice/customer-list'])
+    let result  = this.customerService.addCustomer(this.customer);
+    console.log(result);
+    this.router.navigate(['/invoice/customer/list']);
   }
 
   constructor(
